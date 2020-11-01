@@ -1,0 +1,48 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: $primary-text-color;
+}    
+
+.list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+    current::after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 100%;
+    
+        bottom: -4px;
+    
+        position: absolute;
+    
+        background-color: $accent-color;
+    
+        border-radius: 2px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .current::after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 100%;
+    
+        bottom: -4px;
+    
+        position: absolute;
+    
+        background-color: $accent-color;
+    
+        border-radius: 2px;
+    }
+}
