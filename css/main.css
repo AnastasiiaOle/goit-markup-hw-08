@@ -97,17 +97,6 @@ body {
   color: #FFFFFF;
 }
 
-.section-description {
-  margin-top: 0px;
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.166;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
 .modal-button,
 .modal-form-btn {
   display: inline-block;
@@ -525,17 +514,12 @@ main > .logo {
   margin-top: 0px;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.364;
+  font-size: 26px;
+  line-height: 1.615;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #FFFFFF;
-}
-
-@media screen and (min-width: 1200px) {
-  .order-servise {
-    margin-bottom: 94px;
-  }
 }
 
 .background {
@@ -543,7 +527,50 @@ main > .logo {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .background {
+    background-image: url(../images/hero/hero-mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .background {
+    background-image: url("../images/hero/hero-tablet.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .background {
+    background-image: url(../images/hero/hero-tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .order-servise {
+    margin-bottom: 94px;
+  }
+  .description {
+    font-size: 44px;
+    line-height: 1.364;
+  }
+  .background {
+    background-image: url("../images/hero/hero-.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .background {
+    background-image: url(../images/hero/hero-desctop@2x.jpg);
+  }
+}
+
+.advantages {
+  margin-bottom: 60px;
 }
 
 .advantages-text {
@@ -569,6 +596,7 @@ main > .logo {
 }
 
 .advantages-description {
+  text-align: center;
   margin-top: 0px;
   margin-bottom: 10px;
   font-weight: 700;
@@ -580,7 +608,7 @@ main > .logo {
 }
 
 .advantages-item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .icon-antenna::before {
@@ -601,10 +629,22 @@ main > .logo {
 
 @media screen and (min-width: 480px) {
   .advantages-list {
+    width: 100%;
     display: block;
   }
+}
+
+@media screen and (min-width: 768px) {
   .advantages-description {
-    text-align: center;
+    text-align: start;
+  }
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .advantages-item {
+    width: 300px;
   }
 }
 
@@ -612,24 +652,28 @@ main > .logo {
   .advantages {
     margin-bottom: 94px;
   }
+  .advantages-text {
+    margin-bottom: 0;
+  }
+  .advantages-item:not(:last-child) {
+    margin-right: 30px;
+  }
   .advantages-list {
     display: flex;
+    flex-wrap: nowrap;
   }
   .advantages-description {
     text-align: start;
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .work-description {
-    display: none;
-  }
+.work-description {
+  display: none;
 }
 
 @media screen and (min-width: 1200px) {
   .work-description {
     display: block;
-    margin-bottom: 94px;
   }
   .work-description-list {
     display: flex;
@@ -660,10 +704,32 @@ main > .logo {
 }
 
 .our-team {
+  width: 100%;
+  display: block;
+}
+
+.employee-photo {
+  display: block;
+  margin: 0  auto;
+}
+
+.our-team {
   margin-bottom: 60px;
+  margin-top: 60px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #F5F4FA;
+}
+
+.section-description {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
 
 .team-content {
@@ -695,14 +761,27 @@ main > .logo {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 480px) {
-  .our-team {
-    width: 100%;
-    display: block;
-  }
-  .employee-photo {
-    display: block;
-    margin: 0  auto;
+.employee-name,
+.employee-position {
+  background-color: #FFFFFF;
+}
+
+.team-list {
+  display: block;
+}
+
+.team-item {
+  border-radius: 0px 0px 4px 4px;
+}
+
+.employee-photo {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -711,20 +790,10 @@ main > .logo {
     padding-bottom: 94px;
     padding-top: 94px;
     margin-bottom: 94px;
+    margin-top: 94px;
   }
-  .employee-name,
-  .employee-position {
-    background-color: #FFFFFF;
-  }
-  .team-list {
-    display: flex;
-    justify-content: space-between;
-  }
-  .team-item {
-    border-radius: 0px 0px 4px 4px;
-  }
-  .employee-photo {
-    display: block;
+  .section-description {
+    margin-bottom: 50px;
   }
 }
 
