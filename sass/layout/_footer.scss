@@ -2,13 +2,11 @@
     background-color: $background-color-service-footer;
     padding-top: 60px;
     padding-bottom: 60px;
-
-    .container {
-        display: flex;
-    }
 }
 
 .join {
+    margin-top: 60px;
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     width: 206px;
@@ -104,5 +102,18 @@
 
     &-link:hover {
         background-color: $accent-color;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page-footer {
+        .container {
+            display: flex;
+        }
+    }
+
+    .join {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }

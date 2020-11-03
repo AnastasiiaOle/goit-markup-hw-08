@@ -13,6 +13,19 @@ body {
   text-decoration: none;
 }
 
+.section-description {
+  margin-top: 0px;
+  margin-bottom: 0;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.179;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
 @media screen and (min-width: 480px) {
   current::after {
     content: "";
@@ -36,6 +49,12 @@ body {
     position: absolute;
     background-color: #2196F3;
     border-radius: 2px;
+  }
+  .section-description {
+    padding-top: 94px;
+    padding-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.166;
   }
 }
 
@@ -69,8 +88,8 @@ body {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
+  font-size: 24px;
+  line-height: 1,166px;
   letter-spacing: 0.03em;
   color: #2196F3;
   list-style: none;
@@ -83,6 +102,13 @@ body {
 
 .logo-footer {
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.192;
+  }
 }
 
 .modal-button,
@@ -449,11 +475,9 @@ main > .logo {
   padding-bottom: 60px;
 }
 
-.page-footer .container {
-  display: flex;
-}
-
 .join {
+  margin-top: 60px;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   width: 206px;
@@ -547,5 +571,15 @@ main > .logo {
 
 .footer-social-list-link:hover {
   background-color: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer .container {
+    display: flex;
+  }
+  .join {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

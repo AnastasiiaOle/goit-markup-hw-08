@@ -13,6 +13,20 @@ body {
     text-decoration: none;
 }
 
+.section-description{
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.179;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+}
+
+
 @media screen and (min-width: 480px) {
     current::after {
         content: "";
@@ -44,5 +58,12 @@ body {
         background-color: $accent-color;
     
         border-radius: 2px;
+    }
+
+    .section-description {
+        padding-top: 94px;
+        padding-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.166;
     }
 }
