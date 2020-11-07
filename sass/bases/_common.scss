@@ -13,7 +13,7 @@ body {
     text-decoration: none;
 }
 
-.section-description{
+.section-description {
     margin-top: 0px;
     margin-bottom: 0;
     padding-top: 60px;
@@ -28,7 +28,24 @@ body {
 
 
 @media screen and (min-width: 480px) {
-    current::after {
+    .current::after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 100%;
+    
+        bottom: -4px;
+    
+        position: absolute;
+    
+        background-color: $accent-color;
+    
+        border-radius: 2px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .current::after {
         content: "";
         display: block;
         height: 4px;
