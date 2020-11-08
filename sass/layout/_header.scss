@@ -1,13 +1,11 @@
- 
-.header {
+ .header {
     position: relative;
     background-color: $white-text-color;
-    border: 1px solid #ECECEC;
-
+    
     &-email-link,
     &-tel-link {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.167;
     letter-spacing: 0.02em;
     color: $primary-text-color;
@@ -21,20 +19,36 @@
     &-tel-link:focus {
     color: $accent-color;
     } 
+
+    
+    &-email-link:hover .contacts-icon-mail {
+    fill: $accent-color;
+    }
+
+    &-tel-link:hover .contacts-icon-tel{
+    fill: $accent-color;
+    }
 }
 
 .nav-container {
     display: none;
 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-
     &.is-open {
         display: block;
-    }
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        height: 393px;
+        min-width: 480px;
+        text-align: center;
+        background: $white-text-color;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+        }
 }
+
  
 .navigation > .logo {
     align-self: center;
@@ -44,15 +58,21 @@
 
     &-list-link {
         position: relative;
-        padding-top: 32px;
-        padding-bottom: 28px;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 1.143;
+        font-size: 18px;
+        line-height: 1.167;
         letter-spacing: 0.02em;
         color: $title-text-color;
 
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &-list-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    &-list-item:last-child {
+        margin-bottom: 60px;
     }
 
     &-list-link.current {
@@ -65,24 +85,26 @@
     } 
 }
 
+.main {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
 
 .btn-burger-menu {
     display: inline-flex;
+    justify-content: center;
     align-self: center;
+    align-items: center;
     padding: 0;
-    margin: 0;
+    margin-top: 10px;
+    margin-left: auto;
     width: 40px;
     height: 40px;
     border: none;
     background-color: $white-text-color;
 }
 
-.menu-icon {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-}
 
 .btn-burger-menu .icon-close {
     display: none;
@@ -96,10 +118,16 @@
     display: none;
 }
  
- 
+
 .contacts {
+
+    &-icon:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
     &-icon-mail {
-        display: flex;
+        display: inline-flex;
+        align-items: center;
         width: 16px;
         height: 12px;
         fill: $primary-text-color;
@@ -109,7 +137,8 @@
     }
 
     &-icon-tel {
-        display: flex;
+        display: inline-flex;
+        align-items: center;
         width: 10px;
         height: 16px;
         fill: $primary-text-color;
@@ -120,15 +149,6 @@
 
 }
 
-
-.header-email-link:hover .contacts-icon-mail {
-    fill: $accent-color;
-}
-
-.header-tel-link:hover .contacts-icon-tel{
-    fill: $accent-color;
-}
-
 .contacts-item > .header-email-link {
     margin-bottom: 9px;
 }
@@ -137,8 +157,12 @@
 
 @media screen and (min-width: 768px) {
     .header {
+        border: 1px solid #ECECEC;
+
         &-email-link,
         &-tel-link {
+        font-size: 12px;
+        line-height: 1.167;
         display: flex;
         margin-right: 0;
         }
@@ -153,6 +177,10 @@
         display: none;
     }
 
+    .btn-burger-menu.is-open{
+        display: none;
+    }
+
     .navigation-list {
         display: flex;
         align-items: center;
@@ -162,15 +190,38 @@
     .navigation {
         display: flex;
 
+        &-list-link {
+                font-size: 14px;
+                line-height: 1.143;
+                letter-spacing: 0.02em;    
+                padding-top: 32px;
+                padding-bottom: 28px;
+        }
+
         &-list-item:not(:last-child) {
             margin-right: 50px;
+            margin-bottom: 0;
+        }
+
+        
+        &-list-item:last-child {
+        margin-bottom: 0px;
         }
     }
 
-    .main {
-        display: flex;
-        align-items: center;
-        height: 80px;
+    .contacts {
+        &-icon:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        &-icon-mail {
+            display: flex;
+        }
+    
+        &-icon-tel {
+            display: flex;
+        }
+    
     }
 
     .nav-container {
@@ -201,10 +252,6 @@
 
     .contacts {
         display: flex;
-
-        &-icon-mail {
-            display: flex;
-        }
         
         &-icon:not(:last-child) {
         margin-right: 30px;

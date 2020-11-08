@@ -1,5 +1,5 @@
 .logo {
-    margin-right: 250px;
+    display: inline-flex;
     font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -20,7 +20,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .logo{
+    .logo {
         margin-right: 88px;
     }
 }
