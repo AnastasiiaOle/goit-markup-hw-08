@@ -602,6 +602,7 @@ body {
     display: flex;
   }
   .nav-container {
+    position: static;
     display: flex;
     justify-content: space-between;
   }
