@@ -213,14 +213,6 @@
         &-icon:not(:last-child) {
             margin-bottom: 0;
         }
-
-        &-icon-mail {
-            display: flex;
-        }
-    
-        &-icon-tel {
-            display: flex;
-        }
     
     }
 
@@ -228,6 +220,21 @@
         position: static;
         display: flex;
         justify-content: space-between;
+
+        &.is-open {
+            display: flex;
+            position: static;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 0;
+            min-width: 0;
+            text-align: start;
+            background: $white-text-color;
+            box-shadow: none;
+            }
     }
 
 }
@@ -257,6 +264,14 @@
         &-icon:not(:last-child) {
         margin-right: 30px;
         }
+
+        &-icon-mail {
+                display: flex;
+            }
+        
+        &-icon-tel {
+                display: flex;
+            }
 
     }
 

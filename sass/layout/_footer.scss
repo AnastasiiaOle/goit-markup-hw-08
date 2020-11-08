@@ -192,7 +192,7 @@
     .join {
         display: flex;
         flex-direction: column;
-        width: 206px;
+        justify-content: space-between;
         height: 80px;
         margin-left: 70px;
 
@@ -200,10 +200,6 @@
             text-align: start;
         }
     
-    }
-
-    .address-section {
-        display: flex;
     }
 
     .submit {
