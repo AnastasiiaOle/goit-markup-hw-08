@@ -27,9 +27,7 @@ body {
 
 .section-description {
   margin-top: 0px;
-  margin-bottom: 0;
-  padding-top: 60px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.179;
@@ -77,8 +75,7 @@ body {
     border-radius: 2px;
   }
   .section-description {
-    padding-top: 94px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.166;
   }
@@ -138,7 +135,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .logo {
-    margin-right: 93px;
+    margin-right: 0;
     font-size: 26px;
     line-height: 1.192;
   }
@@ -148,7 +145,7 @@ body {
 .modal-form-btn {
   display: inline-block;
   min-width: 200px;
-  padding: 10px 52px;
+  padding: 10px 20px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -694,7 +691,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .order-servise {
-    margin-bottom: 94px;
+    padding-bottom: 94px;
   }
   .description {
     font-size: 44px;
@@ -810,11 +807,13 @@ body {
 }
 
 .work-description {
+  padding-top: 60px;
   display: none;
 }
 
 @media screen and (min-width: 1200px) {
   .work-description {
+    padding-top: 94px;
     display: block;
     padding-bottom: 94px;
   }
@@ -847,6 +846,7 @@ body {
 }
 
 .our-team {
+  padding-top: 60px;
   width: 100%;
   display: block;
 }
@@ -926,6 +926,9 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .our-team {
+    padding-top: 94px;
+  }
   .team-list {
     display: flex;
     flex-wrap: nowrap;
@@ -934,26 +937,22 @@ body {
 }
 
 .our-clients {
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .clients-list {
-  min-width: 480px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .clients-list-item {
-  width: calc((100%-30px)/2);
-  margin-bottom: 30px;
-}
-
-.clients-list-item:nth-child(even) {
   margin-right: 0;
 }
 
-.clients-list-item:nth-child(n + 5) {
-  margin-bottom: 0;
+.clients-list-item:not(:nth-last-child(-n+2)) {
+  margin-bottom: 30px;
 }
 
 .clients-list-link {
@@ -983,7 +982,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .clients-list-item {
-    width: calc((100%-60px)/3);
+    width: calc((100% - 60px) / 3);
     margin-bottom: 30px;
     margin-right: 0;
   }
@@ -996,10 +995,15 @@ body {
   .clients-list-item:nth-child(n + 4) {
     margin-bottom: 0;
   }
+  .clients-list-link {
+    width: 226px;
+    height: 90px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .our-clients {
+    padding-top: 94px;
     padding-bottom: 94px;
   }
   .clients-list {
@@ -1114,7 +1118,7 @@ body {
 
 .footer-social-list-link {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 44px;
   height: 44px;
@@ -1123,14 +1127,18 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-social-list-link:hover {
+  background-color: #2196F3;
+}
+
+.footer-social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .footer-social-list-item {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.footer-social-list-link:hover {
-  background-color: #2196F3;
 }
 
 .footer-submit-link {
@@ -1212,15 +1220,19 @@ body {
   }
   .page-footer .container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+  }
+  .address-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 70px;
   }
   .join {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 80px;
-    margin-left: 70px;
   }
   .join-text {
     text-align: start;
@@ -1231,6 +1243,11 @@ body {
   }
   .footer-social-list {
     justify-content: space-between;
+  }
+  .footer-social-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .footer-submit {
     margin-right: 0;
@@ -1254,8 +1271,12 @@ body {
   }
   .footer-email-link,
   .footer-tel-link {
-    display: block;
+    display: flex;
     text-align: start;
+  }
+  .footer-tablet-flex {
+    justify-content: space-between;
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
