@@ -10,14 +10,6 @@
     justify-content: space-between;
 
 
-    &-item {
-        margin-right: 0;
-    }  
-    
-    &-item:not(:nth-last-child(-n+2)) {
-        margin-bottom: 30px;
-    }
-    
     &-link {
         display: flex;
         width: 210px;
@@ -47,6 +39,7 @@
         fill: $accent-color;
     }
 }
+
 
 @media screen and (min-width: 768px)  {
 
@@ -86,7 +79,6 @@
     }
 
     .clients-list {
-        display: flex;
         flex-wrap: nowrap;
     
         &-link {

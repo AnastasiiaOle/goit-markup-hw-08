@@ -1,6 +1,10 @@
 body {
     font-family: "Roboto", sans-serif;
     color: $primary-text-color;
+
+    @media screen and (min-width: 320px)  and (max-width: 767px) {
+        min-width: 480px;
+    }
 }    
 
 .list {

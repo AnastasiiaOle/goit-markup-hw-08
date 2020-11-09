@@ -15,6 +15,12 @@ body {
   color: #757575;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    min-width: 480px;
+  }
+}
+
 .list {
   list-style: none;
   padding: 0px;
@@ -414,6 +420,7 @@ body {
 }
 
 .header {
+  border: 1px solid #ECECEC;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -798,6 +805,12 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer-submit-input {
+    margin-right: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer-tablet-flex {
     margin-bottom: 60px;
@@ -820,8 +833,8 @@ body {
     text-align: center;
   }
   .footer-submit {
-    margin-left: 166px;
-    margin-right: 152px;
+    margin-left: 150px;
+    margin-right: 140px;
   }
   .footer-submit-input {
     margin-right: 0;
@@ -830,18 +843,14 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .page-footer {
+  .page-footer .logo {
     text-align: start;
-    background-color: #2F303A;
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
   .page-footer .container {
     display: flex;
     justify-content: space-between;
   }
   .address-section {
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-right: 70px;
@@ -899,8 +908,8 @@ body {
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .portfolio-list {
@@ -928,6 +937,10 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   .portfolio-list {
     flex-wrap: nowrap;
     display: flex;

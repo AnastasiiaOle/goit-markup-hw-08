@@ -15,6 +15,12 @@ body {
   color: #757575;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    min-width: 480px;
+  }
+}
+
 .list {
   list-style: none;
   padding: 0px;
@@ -414,6 +420,7 @@ body {
 }
 
 .header {
+  border: 1px solid #ECECEC;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -858,7 +865,7 @@ body {
 
 .employee-photo {
   display: block;
-  margin: 0  auto;
+  margin: 0 auto;
 }
 
 .our-team {
@@ -907,16 +914,17 @@ body {
   background-color: #FFFFFF;
 }
 
-.team-list {
-  display: block;
-}
-
 .team-item {
   border-radius: 0px 0px 4px 4px;
 }
 
-.employee-photo {
-  display: block;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .employee-photo {
+    width: 100%;
+  }
+  .team-list {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -950,14 +958,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.clients-list-item {
-  margin-right: 0;
-}
-
-.clients-list-item:not(:nth-last-child(-n+2)) {
-  margin-bottom: 30px;
 }
 
 .clients-list-link {
@@ -1012,7 +1012,6 @@ body {
     padding-bottom: 94px;
   }
   .clients-list {
-    display: flex;
     flex-wrap: nowrap;
   }
   .clients-list-link {
@@ -1185,6 +1184,12 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer-submit-input {
+    margin-right: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer-tablet-flex {
     margin-bottom: 60px;
@@ -1207,8 +1212,8 @@ body {
     text-align: center;
   }
   .footer-submit {
-    margin-left: 166px;
-    margin-right: 152px;
+    margin-left: 150px;
+    margin-right: 140px;
   }
   .footer-submit-input {
     margin-right: 0;
@@ -1217,18 +1222,14 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .page-footer {
+  .page-footer .logo {
     text-align: start;
-    background-color: #2F303A;
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
   .page-footer .container {
     display: flex;
     justify-content: space-between;
   }
   .address-section {
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-right: 70px;
