@@ -444,6 +444,7 @@ body {
 }
 
 .nav-container.is-open {
+  z-index: 999;
   display: block;
   position: absolute;
   top: 100%;
