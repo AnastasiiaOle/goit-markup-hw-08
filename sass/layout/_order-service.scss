@@ -1,8 +1,7 @@
 .order-servise {
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    margin-bottom: 60px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     }
 
 .description {
@@ -19,7 +18,6 @@
 
 
 .background {
-    height: 600px;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
@@ -36,14 +34,20 @@
    screen and (min-resolution: 192dpi) and (min-width: 320px),
    screen and (min-resolution: 2dppx) and (min-width: 320px) {
     .background {
-        background-image: url(../images/hero/hero-mobile@2x.jpg);
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ), url(../images/hero/hero-mobile@2x.jpg);
 
     }
 }
 
 @media screen and (min-width: 768px) {
     .background {
-        background-image:
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ), 
     url("../images/hero/hero-tablet.jpg");
     }
 }
@@ -52,14 +56,22 @@
    screen and (min-resolution: 192dpi) and (min-width: 768px),
    screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .background {
-        background-image: url(../images/hero/hero-tablet@2x.jpg);
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),  url(../images/hero/hero-tablet@2x.jpg);
 
     }
 }
 
 @media screen and (min-width: 1200px) {
+    .background {
+        height: 600px;
+    }
+
     .order-servise {
-        padding-bottom: 94px;
+        padding-top: 200px;
+        padding-bottom: 210px;
     }
 
     .description {
@@ -68,7 +80,10 @@
     }
 
     .background {
-        background-image: 
+        background-image:  linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ), 
     url("../images/hero/hero-desctop.jpg");
 
     }
@@ -79,7 +94,10 @@
    screen and (min-resolution: 192dpi) and (min-width: 1200px),
    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     .background {
-        background-image: url(../images/hero/hero-desctop@2x.jpg);
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),  url(../images/hero/hero-desctop@2x.jpg);
 
     }
 }
