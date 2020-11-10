@@ -13,12 +13,6 @@
     margin-right: 0;
 }
 
-.address-street {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 8px;
-
-}
 
 .footer-email-link,
 .footer-tel-link {
@@ -159,6 +153,12 @@
     
     .address-section {
         display: flex;
+    }
+
+    .address-street {
+        margin-top: 20px;
+        margin-bottom: 8px;
+    
     }
 
     .contacts-item {

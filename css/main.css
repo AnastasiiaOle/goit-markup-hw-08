@@ -777,7 +777,7 @@ body {
   background-image: url(../images/advantages/astronaut.png);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .advantages-list {
     width: 100%;
     display: block;
@@ -960,6 +960,10 @@ body {
   justify-content: space-between;
 }
 
+.clients-list-item:nth-child(-n + 4) {
+  margin-bottom: 30px;
+}
+
 .clients-list-link {
   display: flex;
   width: 210px;
@@ -1064,12 +1068,6 @@ body {
 .page-footer .logo {
   display: block;
   margin-right: 0;
-}
-
-.address-street {
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 8px;
 }
 
 .footer-email-link,
@@ -1199,6 +1197,10 @@ body {
   }
   .address-section {
     display: flex;
+  }
+  .address-street {
+    margin-top: 20px;
+    margin-bottom: 8px;
   }
   .contacts-item {
     display: flex;
