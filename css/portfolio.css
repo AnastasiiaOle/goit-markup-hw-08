@@ -1043,6 +1043,12 @@ body {
   color: #FFFFFF;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .portfolio-photo {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .our-portfolio-item {
     position: relative;
