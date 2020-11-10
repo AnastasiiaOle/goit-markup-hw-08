@@ -734,7 +734,6 @@ body {
 }
 
 .advantages-item::before {
-  padding-right: 100px;
   margin-bottom: 30px;
   display: block;
   content: "";
